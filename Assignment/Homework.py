@@ -76,3 +76,11 @@ session.commit()
 
 #Using the session.add(i) and session.commit() stages and saves my changes similar to docker
 
+i = session.query(Customer).filter(customer.name == 'JohnDoe').one()
+i
+session.delete(i)
+session.commit()
+
+#Step 6 Using the Delete command above I could remove the name John Doe. Correction using "Customer.username =" I removed JohnDoe
+
+
