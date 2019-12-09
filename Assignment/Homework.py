@@ -44,3 +44,12 @@ session.commit()
 session.query(Customer).all()
 #Output: Displays Jane and John Doe's name
 
+q = session.query(Customer)
+ 
+for c in q:
+    print(c.id, c.first_name)
+    
+#Using above code, will only yield the First name of the customers. 
+#After Going through Tutorial part of data querying, it's mainly fetching and narrowing data searching. 
+#All outputs have been good up to this point. End of Step 3
+
