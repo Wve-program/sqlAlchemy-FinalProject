@@ -10,3 +10,4 @@ This will also include a changelog and a rebuilt calculator for the missing calc
 
 **12/8/2019** - Task: Built Homework File. 
 
+**12/9/2019** - Task: For the SQLAlchemy Miniproject homework, the tutorial was completed.
