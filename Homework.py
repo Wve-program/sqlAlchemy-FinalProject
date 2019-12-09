@@ -1,4 +1,4 @@
-#This is the tutorial coding used for the Homework and tested separately between here and pycharm
+#This is the tutorial code used for the Homework and tested separately between here and pycharm
 
 from sqlalchemy.orm import sessionmaker, Session
 Session = sessionmaker(bind=engine)
