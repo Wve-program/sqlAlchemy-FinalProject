@@ -53,3 +53,26 @@ for c in q:
 #After Going through Tutorial part of data querying, it's mainly fetching and narrowing data searching. 
 #All outputs have been good up to this point. End of Step 3
 
+#Step 4. recreating the session I used the tutorial code for dealing with duplicates.
+from sqlalchemy import distinct
+ 
+session.query(Customer.town).filter(Customer.id  < 10).all()
+session.query(Customer.town).filter(Customer.id  < 10).distinct().all()
+ 
+session.query(        
+    func.count(distinct(Customer.town)),
+    func.count(Customer.town)
+).all()
+
+#This only yielded objects 1 and 2, due to me only putting two objects in there.
+
+#Using session Union command wouldn't work, because I never defined items.
+
+#Step 5 using Updating code
+i = session.query(Customer).get(1)
+i.name_change = Jonathan
+session.add(i)
+session.commit()
+
+#Using the session.add(i) and session.commit() stages and saves my changes similar to docker
+
