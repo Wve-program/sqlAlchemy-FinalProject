@@ -1,4 +1,6 @@
 from sqlalchemy.orm import sessionmaker, Session
 Session = sessionmaker(bind=engine)
 
+session = Session()
+
 
