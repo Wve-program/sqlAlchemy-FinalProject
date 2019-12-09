@@ -10,16 +10,14 @@ c1 = Customer(first_name = 'Jane',
               username = 'JDoe', 
               email = 'janedoe01@aol.com', 
               address = '152 West Nyack Street',
-              town = 'West Nyack'
-             )
+              town = 'West Nyack')
  
 c2 = Customer(first_name = 'John', 
               last_name = 'Doe',
               username = 'JohnDoe',
               email = 'JohnDoe@aol.com
               address = 'West Nyack",
-              town = 'West Nyack
-             )
+              town = 'West Nyack')
 c1, c2
 
 c1.first_name, c1.last_name
