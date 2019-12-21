@@ -16,6 +16,9 @@ class UserModel(db.Model):
   created_at = db.Column(db.DateTime)
   modified_at = db.Column(db.DateTime)
 
+  modified_at = db.Column(db.DateTime)
+  blogposts = db.relationship('BlogpostModel', backref='users', lazy=True)
+  
   def __init__(self, data):
     """
     Class constructor
@@ -51,3 +54,15 @@ class UserModel(db.Model):
   
   def __repr(self):
     return '<id {}>'.format(self.id)
+
+class UserSchema(Schema):
+  """
+  User Schema
+  """
+  id = fields.Int(dump_only=True)
+  name = fields.Str(required=True)
+  email = fields.Email(required=True)
+  password = fields.Str(required=True)
+  created_at = fields.DateTime(dump_only=True)
+  modified_at = fields.DateTime(dump_only=True)
+  blogposts = fields.Nested(BlogpostSchema, many=True)
